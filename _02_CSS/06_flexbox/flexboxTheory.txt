@@ -1,0 +1,14 @@
+#CSS: Flexbox
+When we go with the Flexbox. There are two concept you always need to remember
+1. Main Access     2. Other Access/ Alternative Access
+
+In the "world of web". Whenever you say  Flexbox that means "Main Access" is going
+to run from left to right.
+
+The reason for that is some of the properties is attach with "Main Access" and some of the
+properties is attach with the "Other Access".
+
+(Additional point):-
+In Mobile app "Main Access" is from top to bottom.
+We normally use flexbox to make two or more div container inline. So that we can 
+structure our website.

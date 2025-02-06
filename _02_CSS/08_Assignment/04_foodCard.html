@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food-Card</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto", sans-serif;
+        font-size: 16.5px;
+      }
+      body {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        box-sizing: border-box;
+        border: 1px solid black;
+        background: linear-gradient(
+          30deg,
+          rgba(2, 1, 1, 0.869),
+          rgb(120, 120, 120)
+        );
+        margin: 10px;
+        padding: 20px;
+        height: 490px;
+        min-height: 490px;
+        width: 100%;
+        /* Remember: this width: 100% is according to parent container. */
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: 8px;
+      }
+      .card-container {
+        background: linear-gradient(
+          30deg,
+          rgb(231, 231, 35),
+          rgb(165, 209, 233)
+        );
+        border: 3px solid rgb(224, 228, 224);
+        /* margin-left: 75px; */
+        height: 265px;
+        width: 400px;
+        min-width: 300px;
+        min-height: 265px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        overflow: visible;
+        border-radius: 25px;
+      }
+      img {
+        border: 5px solid rgb(14, 2, 2);
+        position: absolute;
+        margin-top: -80px;
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+      }
+
+      h2 {
+        /* border: 1px solid black; */
+        margin-top: 78px;
+      }
+      p {
+        /* border: 1px solid blue; */
+        width: 80%;
+        margin-top: 8px;
+      }
+      button {
+        margin-top: 6px;
+        padding: 5px 25px;
+        border-radius: 10px;
+        background-color: rgb(92, 100, 214);
+      }
+      button:hover {
+        border: 1px solid white;
+        background-color: rgb(62, 73, 226);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card-container">
+        <img src="../images/Burger.jpg" alt="" />
+
+        <h2>Burger</h2>
+        <p>
+          A chicken burger combines a seasoned ground chicken or chicken fillet
+          patty with fresh vegetables, served in a toasted bun. Common
+          seasonings include garlic, herbs, and pepper, making it a flavorful.
+        </p>
+        <button>more</button>
+      </div>
+
+      <div class="card-container">
+        <img src="../images/Pizza.jpg" alt="" />
+        <h2>Pizza</h2>
+        <p>
+          A pizza features a crisp baked dough base topped with tomato sauce,
+          melted cheese, and various toppings of choice, baked until golden.
+          making it a beloved Italian-origin dish. Therefore people love it.
+        </p>
+        <button>more</button>
+      </div>
+    </div>
+  </body>
+</html>

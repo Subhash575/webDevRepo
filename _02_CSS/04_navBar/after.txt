@@ -1,0 +1,15 @@
+# Here we learn about the after effect property of css. You see this property on 
+"navbar.html" file.
+        .nav1 a::after {
+            content = ""
+            // content is complusory in this css property 
+            // and this is inline in nature.
+            // You can learn more on mdn css docs.
+            
+        }
+
+        .nav1 a:hover::after{
+
+        }
+
+        similarly to "after" their is "before" property as well.

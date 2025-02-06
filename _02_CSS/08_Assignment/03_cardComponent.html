@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card-Component</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Kablammo&family=Oxanium:wght@200..800&family=SUSE:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "SUSE", sans-serif;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        background-color: rgba(44, 43, 43, 0.914);
+      }
+
+      .container {
+        box-sizing: border-box;
+        /* border: 1px solid black; */
+        border-radius: 10px;
+        background: linear-gradient(
+          127deg,
+          rgb(232, 249, 249),
+          rgba(255, 247, 244, 0.603)
+        );
+        margin: 10px;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 350px);
+        gap: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 575px;
+      }
+
+      .card-container {
+        background: linear-gradient(
+          60deg,
+          rgba(119, 105, 135, 0.81),
+          rgba(255, 255, 253, 0.711)
+        );
+        /* border: 1px solid black; */
+        border-radius: 8px;
+        width: 485px;
+        height: 405px;
+        /* for box-shadow property refer to code with harry website */
+        box-shadow: 1px 1px 4px 0px #d6d6d6;
+        /* Here: 1. horizontal 2.vertical 3.blur 4.spread  5. color*/
+      }
+
+      img {
+        /* border: 1px solid black; */
+        margin-top: 25px;
+        margin-left: 10px;
+        padding: 10px;
+        width: 90%;
+        height: 220px;
+        object-fit: cover;
+      }
+
+      .headline {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      h2 {
+        margin-left: 21px;
+      }
+
+      .fa-arrow-up-right-from-square {
+        margin-top: 7px;
+        margin-right: 25px;
+      }
+
+      p {
+        /* border: 1px solid black; */
+        margin-top: 10px;
+        margin-left: 24px;
+        width: 90%;
+      }
+
+      .icon {
+        border: 1px solid rgba(235, 232, 232, 0.479);
+        margin-top: 18px;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 8px;
+      }
+      .fa-heart {
+        font-size: 14px;
+        padding: 10px;
+        margin-left: 15px;
+      }
+
+      .fa-comment {
+        font-size: 14px;
+      }
+      .fa-share {
+        margin-right: 14px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card-container">
+        <img src="../images/travel.jpg" alt="" />
+        <div class="headline">
+          <h2>Travel photography</h2>
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+        <p>
+          Beautiful collection of landscape and cultural photography from around
+          the world.
+        </p>
+        <div class="icon">
+          <div class="icon-component">
+            <i class="fa-regular fa-heart">432</i>
+            <i class="fa-regular fa-comment">35</i>
+          </div>
+          <i class="fa-solid fa-share"></i>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <img src="../images/food.jpg" alt="" />
+        <div class="headline">
+          <h2>Cooking</h2>
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+        <p>
+          Different variety of foods around their recipy picture photography
+          from around the world
+        </p>
+        <div class="icon">
+          <div class="icon-component">
+            <i class="fa-regular fa-heart">532</i>
+            <i class="fa-regular fa-comment">95</i>
+          </div>
+          <i class="fa-solid fa-share"></i>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <img src="../images/E-commerce.jpg" alt="" />
+        <div class="headline">
+          <h2>E-commerce website</h2>
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+        <p>
+          Beautiful collection of variety of clothes and it image from all
+          around the world.
+        </p>
+        <div class="icon">
+          <div class="icon-component">
+            <i class="fa-regular fa-heart">232</i>
+            <i class="fa-regular fa-comment">20</i>
+          </div>
+          <i class="fa-solid fa-share"></i>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <img src="../images/Seo.jpg" alt="" />
+        <div class="headline">
+          <h2>SEO</h2>
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+        <p>
+          Seo help in standing out your website from the other website on the
+          web to learn about seo more you can learn from here.
+        </p>
+        <div class="icon">
+          <div class="icon-component">
+            <i class="fa-regular fa-heart">732</i>
+            <i class="fa-regular fa-comment">45</i>
+          </div>
+          <i class="fa-solid fa-share"></i>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+#1. Here in food-card we learn the concept of position.
+In position property the "position: relative" is given to those container from which we want
+to take the position relative and the container/box we want to move we use the property
+"position:absolute". you can see in food-card assignment how we can use it.
+For more property you need to refer w3 or mdn.
+
+#2. Here we learn the "overflow concept" by which we can give the effect of "overlap' 
+which you can see in the food-card assignment.
+for "overlap effect" this are the property you need to give.
+overflow:visible  //The container from which you want to show overflow.
+margin-top: -10  // given according to use/need.
+
+

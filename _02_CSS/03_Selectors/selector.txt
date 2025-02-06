@@ -1,0 +1,15 @@
+ SELECTORS(CSS):
+ Selectors is the ability to select any element on the webpage and their is variety of 
+ way to doing so and this is a "rabbit hole".
+ In professional environment people use the simplest way to get the work done.
+ Majority of the professional website use the tool which generate the CSS.
+ such tool we see now a days is Tailwind.
+
+#Easiest way to selecting a element:-
+Using "Classes"
+
+#DOM
+The way how html website is loaded on the web page is known as DOM(Document Object Model)
+whenever you actually work with the DOM that means how your page is "structured", how it
+laid out, that is your DOM. So this is the ability of transforming your HTML code
+into an "object model" or a "tree" that can be rendered by the browser.

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shoe Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Kablammo&family=Oxanium:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Oxanium", sans-serif;
+      }
+
+      body {
+        height: 100vh;
+        background-color: #23013cd1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      h2 {
+        color: #121010;
+      }
+      p {
+        color: #1b1a1a;
+        margin-bottom: 8px;
+      }
+      .container {
+        background: linear-gradient(
+          127deg,
+          rgb(128, 225, 64),
+          rgba(36, 46, 163, 0.742)
+        );
+        margin: 20px;
+        padding: 15px;
+        height: 400px;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1rem;
+      }
+
+      .img-container {
+        /* border: 2px solid black; */
+        width: 100%;
+      }
+
+      img {
+        /* For Object-fit property you need to give height and width */
+        height: 275px;
+        width: 400px;
+        object-fit: fill;
+        border-radius: 1rem;
+      }
+
+      .container .btn {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+      .container button {
+        padding: 10px 15px;
+        border: 2px solid rgb(61, 62, 61);
+        border-radius: 8px;
+        background-color: rgba(156, 216, 116, 0.561);
+        color: #333;
+      }
+
+      .container button:hover {
+        border: 2px solid white;
+        background-color: rgba(179, 224, 149, 0.772);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="img-container">
+        <img src="../images/shoe1.webp" alt="shoe-image" />
+      </div>
+
+      <h2>FUTURISTIC HC SHOE</h2>
+      <p>coming soon</p>
+      <div class="btn">
+        <button>BUY NOW</button>
+        <button>ADD TO CART</button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <style>
+    /* Types of selector:-  */
+     /* 
+     1. Universal Selector: In general web browser add their own padding, margin to the
+     webpage to remove this effect we use the Universal Selector  and add own padding, 
+     margin to the website.(We normally write universal selector first than do other
+     styling work.)
+      */
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+        /* border-boxing: How much an element is going to take a space on the web page +
+        padding + border + margin */
+    }
+
+    /* 2. Type Selector: This means I will tell you what element. I'm selecting on the
+    web page. for ex: It could be h1, p, etc. let say we have 
+     selected p(It will select all the "p tag" on the
+    webpage. Therefore it is called Type Selector. */
+    p{
+       font-size: 17px; 
+       /* We have "shortcut" for margin, padding:- clockwise(Top, right, bottom, left) */
+       margin: 10px 20px 10px 20px;
+       padding: 1px 2px 3px 4px;
+       /* We can have padding, margin 2, 3 value also possible:-
+          If 3 value:-
+          ex: padding: 1px(Top) 2px(Right and Left) 3px(Bottom)  
+          
+          If 2 value:-
+          ex: padding: 2px(Top, Bottom) 3px(Right, Left).
+
+          Above property also hold for margin as well.
+          To visualise this property you can inspect on paragraph and then went on computed where you can see
+          this  property implemented.
+        */
+        margin-bottom: 20px;
+        /* You can use above property acc to your need. */
+    }
+    
+    /* 3. Class Selector:- It has attribute class. Here we selecting the class and then style it.
+          Class is selected by the "."  */
+    .highlight{
+        background-color: gold;
+        /* There are some frameworks, libraries which generate classes for you one of this is "Tailwind" */
+    }
+
+    /* 4. ID Selector:- (Imp)According to the specification you should have only "one unique id" on web page.
+       It has the attribute ID which is selected by the "#".
+    */
+    #header{
+        background-color: #2be39a;
+        /* There are different way of adding color in wepage using html , css but most common one is 
+        hash  symbol. But the VS code actually allows you to have the input color in different formats.
+        So for example I can just hover over the color this is a default behavior of VS code and click on the
+       above hash code it converts into "HSL: Hue Saturation and lightness" , HWB(Hue Whiteness and Blackness),
+        rgb, hash code(most common one is the hash code) these are the different color format.*/
+
+        /*(Imp) In general we don't prefer to simply write the "color" bcs different browser render the same
+        color in different shades which is not good for "professional website" therefore we can generally use
+        the "hash color" format.
+        ex:-
+        color: red; (not use normally/ not prefer)
+        color: #2be39a (It is prefer)  */
+    }
+
+    /* 5. Attribute Selector:- You have to just name what is the element(tag) that you are 
+    selecting and what kind of attribute you are targeting and you can optionally enter 
+    what is the value of that attribute. */
+    input[type = "text"] {
+        border: 2px solid rgb(90, 203, 34);
+    }
+
+    /* 6. Descendant Selector:- In descendant selector one common advice that you're going to get throughout
+    whenever there is a css selector, try to read it from right to left(syntax tag) instead of left to right 
+    */
+    /* Below read as all the p which is descendant of article */
+    article p{
+        font-style: italic;
+        background-color: #55d3ec;
+        padding: 10px;
+    }
+
+    /* 7. child Selector: */
+    div > p {
+        background-color: purple;
+    }
+
+    /* 8. Adjacent Sibling Selector: */
+    /* (Remember): always read from right to left any type of selector(imp) */
+    h1 + p {
+        font-weight:bold;
+    }
+
+    /* 9. General Sibling Selector: */
+    /* Imp : Here after h2 how many paragraph(p) comes which is sibling only those selected before h2
+     paragraph(p) which is sibling or not it is not selected */
+    h2 ~ p {
+        background-color: #e3902324;
+    }
+
+    /* 10. (imp)Pseudo-class Selector: A lot of elements on the HTML. They have the behaviors, different
+    behaviors when you select the input, different behaviors when you put the mouse over it and you can 
+    control all of these properties based on what element you are targeting. */
+
+    /* Here we selecting all the "a tag" and I only want to implement the CSS whenever there is a hover motion
+     in action on that. */
+    a:hover{
+        background-color: #9ada5e;
+        text-decoration: none;
+        padding: 5px;
+        margin: 4px;
+    }
+
+    /*11. Pseudo-element Selector: */
+    p::first-letter{
+        font-weight: bold;
+        font-size: 35px;
+    }
+
+    /* 12. Grouping Selector: */
+    h1, h2, h3{
+        color: hotpink;
+    }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <header id="header">This is the header</header>
+
+    <h1>Main Heading</h1>
+    <p>
+        This paragraph is adjacent to h1 and demonstrated the adjacent sibling selector.
+    </p>
+    <p>This is a regular paragraph showing the type selector.</p>
+    <p>work done</p>
+    <p class="highlight">
+        This paragraph has a highlight class, demonstrating the class selector.
+    </p>
+
+    <input type="text" nlaceholder="Enter text here">
+
+    <article>
+        <p>
+            This paragraph is inside an article, showing the descendant selector.
+        </p>
+        <p>
+            It is also a descendant.
+        </p>
+        <!-- you can see that "descendant selector" property also apply on another paragraph inside the
+         article bcs this is also a descendant -->
+        
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <!-- This is also a descendant. -->
+
+        <div> Lorem ipsum dolor sit.</div>
+
+    </article>
+
+    <div>
+        <p>I am a child</p>
+        <p>I am a child</p>
+        <section>
+            <p>I am a Descendant</p>
+        </section>
+        <p>I am a child</p>
+    </div>
+    <p>Please compelete the work.</p>
+    <h2>Sub Heading</h2>
+    <p>
+        This is a sibling paragraph to h2, demonstrating the general sibling selector.
+    </p>
+    <div>this is a sibling div to h2.</div>
+    <p>This is another sibling paragraph to h2.</p>
+
+    <a href="#">Hover over me to see the pseudo-class selector in action</a>
+
+    <p>
+        This paragraph demonstrates pseudo-element selectors with a styled first
+        line and first letter.
+    </p>
+
+    <h3>Heading 3</h3>
+
+    <p>
+      The heading h1, h2 and h3 use the grouping selector for consisten font family.
+    </p>
+</body>
+</html>

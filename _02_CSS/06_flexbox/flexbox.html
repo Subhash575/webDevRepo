@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox-property</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1{
+            margin: 10px;
+        }
+
+        .container{
+            border: 2px solid black;
+            margin: 10px;
+            padding: 20px;          
+        }
+
+        .flex-container{
+            display: flex;
+            padding: 30px;
+            margin: 20px;
+            height: 150px;
+        }
+
+        .circle{
+            height: 40px;
+            width: 40px;
+            /* border-radius: 50%; */
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            margin: 4px;
+        }
+
+        .pastel1{
+            background-color: #ffb3ba;
+        }
+        .pastel2{
+            background-color: #baffc9;
+        }
+        .pastel3{
+            background-color: #bae1ff;
+        }
+        .pastel4{
+            background-color: #ffffba;
+        }
+        .pastel5{
+            background-color:  #ffdfba
+        }
+        .pastel6{
+            background-color: #5309bb9c;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Flexbox Masterclass Demo</h1>
+
+    <div class="container">
+        <h2>1. Default flex(row)</h2>
+        <div class="flex-container">
+         <div class="circle pastel1">1</div>
+         <div class="circle pastel2">2</div>
+         <div class="circle pastel3">3</div>
+         <div class="circle pastel4">4</div>
+         <div class="circle pastel5">5</div>
+         <div class="circle pastel6">6</div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h2>2. Flex Direction Column</h2>
+        <div class="flex-container" 
+        style="flex-direction: column;">
+            <div class="circle pastel1">1</div>
+            <div class="circle pastel2">2</div>
+            <div class="circle pastel3">3</div>
+            <div class="circle pastel4">4</div>
+            <div class="circle pastel5">5</div>
+            <div class="circle pastel6">6</div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h2>3. Justify Content :  space - between</h2>
+        <div class="flex-container"
+         style="justify-content:space-between;">
+            <div class="circle pastel1">1</div>
+            <div class="circle pastel2">2</div>
+            <div class="circle pastel3">3</div>
+            <div class="circle pastel4">4</div>
+            <div class="circle pastel5">5</div>
+            <div class="circle pastel6">6</div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h2>4. Align-Items: Center</h2>
+        <div class="flex-container" 
+        style="align-items:center;">
+            <div class="circle pastel1">1</div>
+            <div class="circle pastel2">2</div>
+            <div class="circle pastel3">3</div>
+            <div class="circle pastel4">4</div>
+            <div class="circle pastel5">5</div>
+            <div class="circle pastel6">6</div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <!-- flex-wrap is important property it
+         will be useful in case of multiple card. -->
+        <h2>5. Flex-Wrap: Wrap</h2>
+        <div class="flex-container"
+        style="flex-wrap: wrap;">
+            <div class="circle pastel1">1</div>
+            <div class="circle pastel2">2</div>
+            <div class="circle pastel3">3</div>
+            <div class="circle pastel4">4</div>
+            <div class="circle pastel5">5</div>
+            <div class="circle pastel6">6</div>
+            <div class="circle pastel1">7</div>
+            <div class="circle pastel2">8</div>
+            <div class="circle pastel3">9</div>
+            <div class="circle pastel4">10</div>
+            <div class="circle pastel5">11</div>
+            <div class="circle pastel6">12</div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h2>6. Align-Content: Space - Around(with wrap)</h2>
+        <div class="flex-container"
+        style=" flex-wrap: wrap; align-content: center;">
+            <div class="circle pastel1">1</div>
+            <div class="circle pastel2">2</div>
+            <div class="circle pastel3">3</div>
+            <div class="circle pastel4">4</div>
+            <div class="circle pastel5">5</div>
+            <div class="circle pastel6">6</div>
+            <div class="circle pastel1">7</div>
+            <div class="circle pastel2">8</div>
+            <div class="circle pastel3">9</div>
+            <div class="circle pastel4">10</div>
+            <div class="circle pastel5">11</div>
+            <div class="circle pastel6">12</div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <!-- Here we change the order of the content
+         by css only here we not actually changing the
+         content we using flex property here -->
+        <h2>7. Order Property</h2>
+        <div class="flex-container">
+            <div class="circle pastel1" style="order:6;">1</div>
+            <div class="circle pastel2" style="order:5;">2</div>
+            <div class="circle pastel3" style="order:4;">3</div>
+            <div class="circle pastel4" style="order:3;">4</div>
+            <div class="circle pastel5" style="order:2;">5</div>
+            <div class="circle pastel6" style="order:1;">6</div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h2>8. Flex Grow</h2>
+        <div class="flex-container">
+            <div class="circle pastel1" style="flex-grow: 5;">1</div>
+            <div class="circle pastel2" style="flex-grow: 2;">2</div>
+            <div class="circle pastel3" style="flex-grow: 2;">3</div>
+            <div class="circle pastel4" style="flex-grow: 2;">4</div>
+            <div class="circle pastel5" style="flex-grow: 1;">5</div>
+            <div class="circle pastel6" style="flex-grow: 4;">6</div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h2>9. Align-Self</h2>
+        <div class="flex-container">
+            <div class="circle pastel1" style="align-self:self-start;">1</div>
+            <div class="circle pastel2" style="align-self:center ;">2</div>
+            <div class="circle pastel3" style="align-self:flex-end ;">3</div>
+            <div class="circle pastel4" style="align-self:stretch;
+            height: auto">4</div>
+            <div class="circle pastel5" style="align-self:self-end ;">5</div>
+            <div class="circle pastel6">5</div>
+        </div>
+    </div>
+    
+    <!-- In CSS Above 5 properities are most important -->
+</body>
+</html>

@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+body,html{
+    margin:0;
+    padding:0;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: "Space Grotesk", sans-serif;
+    height: 100%;
+}
+
+.container{
+    /* Linear from mdn linear gradient */
+    background: linear-gradient(135deg, #8a2be2, #4169e1);
+    /* In linear-gradient: first parameter is degree remember whole page is 360 degree.
+    Since "gradient is made up of two color" you need to provide two color. */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.content{
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    /* rem: is the unit which is relative to m which means how much space(width) a letter
+     m take is called 1 unit */
+    border-radius: 10px;
+    /* check out this type of property also. */
+    max-width: 400px;
+
+}
+
+.logo{
+    width: 100px;
+    /*try out different property of "obj-fit" */
+    object-fit: contain;
+}
+
+h1{
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p{
+    color: #666;
+    margin-bottom: 20px;
+}
+
+form{
+    display: flex; 
+    /* It shift content from left to right */
+    flex-direction: column;
+}
+
+input[type="email"]{
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+    /* (imp)remember here 1rem is approximately
+    equivalent to 20px */
+}
+
+button{
+    padding:0.5rem;
+    background-color: #8a2be2;
+    color:rgba(255, 255, 255, 0.877);
+    border: none;
+    border-radius: none;
+    cursor:pointer;
+    /* Explore about "box-shadow" property */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+
+    /* explore about transition property also */
+    /* "Imp of transition" is that how long it take to apply
+    the effect. Effect in this case is hover*/
+    transition:background-color 0.3s ease-in-out;
+}
+
+button:hover{
+    background-color: #7a1dd1;
+
+}
+
+/* svg{
+    background-color: #4169e1;
+} */

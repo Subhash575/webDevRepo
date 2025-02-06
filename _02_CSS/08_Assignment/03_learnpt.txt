@@ -1,0 +1,21 @@
+1pt(imp): Always use border to see what space your content is taking it will made
+the thing easily understandable why certain property not working.
+ex: If you not give height to container and then set certain property 
+    display:flex;
+    align-items:center;
+    justify-content:cent;
+If you not give certain amount of height and width this property not work to checking
+how much space it take you can use "border-property" here.
+The reason it bcs element take only the require height according to content.
+
+/*
+  for box-shadow property refer to code with harry website
+*/
+ 
+// for font went on google font and then emmbed the code on website.
+
+//for icon : website->font awesome 
+/*
+1. first download cdn from the font awesome cdn link(type on google:font awesome cdn)
+and then paste this code on "head" of html file.
+2. Then went on website(font awesome) and add font/icon you want.

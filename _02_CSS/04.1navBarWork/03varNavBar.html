@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal with dropdown</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        .navbar{
+            margin: 15px;
+            padding: 20px;
+            border: 2px solid black;
+            background-color: #5c46ffac;
+        }
+        
+        .navbar ul{
+            list-style-type: none;
+            padding: 15px;
+            display:flex;
+            justify-content: space-around;
+        }
+
+        .navbar a{
+            text-decoration: none;
+            color:rgba(240, 248, 255, 0.87);
+        }
+
+        .dropdown a{
+            display : block;
+            margin-bottom: 20px; 
+        }
+
+        .navbar .dropdown-items{
+            display: none;
+    
+        }
+
+        .navbar .dropdown:hover .dropdown-items{
+            display:block;
+            position:absolute;
+            background-color: #181819ac;
+            padding: 30px;
+        }
+
+        .navbar .login-btn{
+            border:none;
+            background-color:#4631e4d8;
+            color:rgba(240, 248, 255, 0.87);
+            padding: 5px 20px;
+        }
+
+        .navbar .login-btn:hover{
+            background-color:#4f3cdc92;
+            border: 2px solid white;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li class="dropdown">
+            <a href="#">About</a>
+            <div class="dropdown-items">
+            <a href="#">Story</a>
+            <a href="#">photo</a>
+            <a href="#">community</a>
+            </div>
+            </li>
+            <li><a href="#">Contact</a></li>
+            <li><button class="login-btn">Login</button></li>
+            
+        </ul>
+    </nav>
+
+    
+</body>
+</html>

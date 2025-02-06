@@ -1,0 +1,7 @@
+#What is Bootstrap?
+Simply saying somebody sat down for you and wrote so many CSS classes for you.
+and just by putting this classes on right place, you can style your component.
+for eg: You have your button, somebody has written a "class" named as "btn" and
+"btn-primary", and you just have to inject these two classes in your component or your
+button and that's it.
+your button will look out of the box.

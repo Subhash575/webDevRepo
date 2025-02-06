@@ -1,0 +1,89 @@
+<!--
+ CSS(Cascading Style Sheet):CSS do two thing
+ 1. select element
+ 2. style element
+
+ Type of styling:-
+ 1. inline styling: Here we style within the line.
+ 2. Internal styling: Here we use style tag inside the head tag.
+ 3. External styling: Using the external css file for styling.
+
+ -->
+
+ <!-- 
+ Advice:-
+ 1.FONTS: The more beautiful the font is on the website,it totally changes the "look"
+ "feel", "theme" of entire website with just the font.
+ Font consumes majority of the space on the webpage.
+
+ 2.IMAGES: The more beautifully designed the images are and the more optimizedly and more
+  with the idea of the flow they are then more beautiful is the website.
+
+  3.BUTTON, LIST, CARD: How beautifully this things look like.
+  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basic</title>
+    <!-- INLINE styling:- -->
+     <style>
+        /*
+        //This is element selector.
+        h2{
+            color:darkcyan;
+        }
+        p{
+            color:darkcyan;
+        } 
+        */
+
+        /* In above code duplicaty occur to remove this duplicaty we write the above
+        code as: */
+        /*
+
+         h2, p{
+            color:darkcyan;
+        } 
+
+        */
+
+        /*
+        Another type of selector is Id and class selctor:- 
+        (IMP):-
+        Id: Is unique to one element means one element have one id only not multiple.
+        Class: But one element can have multiple classes and different element have
+        same classes as well.
+
+        (Imp):- 
+        class is selected by '.'.
+        id is selected by '#'.
+
+        */
+         .brown{
+            color:blueviolet;
+         }
+
+     </style>
+     <!-- For EXTERNAL css we need to use the link tag and then link the external
+      css file. for link tag we use the ammet abbrievation shortcut:-  link:css then
+      press enter. -->
+      <!-- (Remember: Here in link tag href is always "style.css" not any other css file 
+    name) therefore if you give the css file name other than "style" then you need to 
+     also change this on href as well. -->      
+       
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--There is global attribute known as "style" -->
+    <!-- Inline styling 
+     In Inline styling we use the "style attribute".-->
+    <h1 style="color:rgb(154, 78, 24)">Lorem ipsum dolor sit amet.</h1>
+    <h2 class="brown">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+
+    <p class="brown" style="color:olive;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur praesentium in, quisquam non dolor vitae quas, a earum, accusantium laudantium harum! Dolore, sunt, necessitatibus deserunt quaerat placeat, corrupti culpa quasi porro consequatur aut distinctio! Amet ad voluptas minima molestias culpa impedit ipsa omnis repellendus veniam laudantium voluptatibus officia distinctio aut reiciendis sed maiores maxime dolorum similique, harum necessitatibus ipsam exercitationem at explicabo? Unde quo autem, ipsa rem eos, dolore culpa odit saepe voluptas rerum velit ad hic veritatis officia dignissimos? Cum repudiandae impedit illum, ipsa sequi veniam, ut rem commodi recusandae quod odit repellat doloribus nobis quasi temporibus, dolore natus cupiditate! Magni, illum. Quo, veniam, quaerat doloribus eveniet aperiam totam minima cupiditate ad quod quia, laborum illum harum iusto rerum? Eius qui voluptates magni eum dolores, iusto harum inventore dolor hic alias ab consequatur ducimus, quasi minima amet doloribus cumque id atque labore quos modi corporis vero? Exercitationem, iusto omnis?</p>
+</body>
+</html>

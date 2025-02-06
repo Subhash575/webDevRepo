@@ -1,0 +1,20 @@
+#Managing of data is done in two ways:-
+1. Handling of data
+2. Processing of data
+
+# Processing of data:- Processing of data involves Programming, lot of logic
+writing or algorithm writing like once you have submitted me email and password
+what to do, how to check it, how to verify it that Processing of data.
+
+#Handling of data:- Once I have received the data, how do I handle this data,
+what are the data types in it.
+
+
+## Data types In JS:-
+Primitive and non-Primitive data type:-
+1.Primitive data type:-
+String, Boolean, Number, null, undefined, Symbol
+
+2. Non-Primitive:-
+Objects
+array, functions, objects

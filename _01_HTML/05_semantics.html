@@ -1,0 +1,151 @@
+<!-- "Semantics" is all about how your web page looks accessible and is nice for the 
+screen readers as well as it serves a good purpose in HTML in general. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- meta tag : These will give the meta data(information about your webpage)
+     how it looks like on the web port what charset you are using.
+     If you are working on japenese or chinese character than UTF structure will
+     change.
+     That means which transcoding we are using. We are in English, UTF-8 is
+     absolutely fine. -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Some time you can see we are load some of the scripts as well these script
+     are nothing they are some of the script to load external JavaScript or some code.
+     It is normal-->
+
+    <!--
+    code:-
+      <script></script>
+     -->
+
+    <!-- Here some times we can write css as well. -->
+
+    <!--
+    code:-
+     <style></style> 
+     -->
+    
+    <title>Gym Workout</title>
+</head>
+<body>
+    <!-- global attribute: for ex: title, id, class. -->
+
+     <!--Before HTML 5 come we generally use the div tag to wrap around everything. -->
+    <!-- emmet abbrivation syntax for class is: tagName.className. 
+     syntax: div.header -->
+    <!--
+
+    <div class="header">
+        <h1>Heading</h1>
+    </div>
+
+    -->
+
+    <!-- Use of semantic tag:- -->
+    <!-- 
+    <header>
+        <h1>Heading</h1>
+     </header> 
+    -->
+    
+    <!-- Use of "semantic tag"  for ex: header in above case doesn't show any change 
+    in the output and have no impact as all.
+    (imp)This is impactful for the "screen readers", for the accessibility of the website.
+    Always remember semantic tag are just a "container".
+    -->
+    <!-- container tag: header, nav, main, article, section, div, aside, footer
+    this are all container tag. But Here excluding div all are semantic tag. -->
+
+    <!-- Here in below code you can also use the footer tag as well. -->
+    <!--
+    <div class="footer">
+        This is a footer
+    </div>
+    -->
+
+    <!-- "hgroup tag" is use for grouping heading from h1 to h6 and we generally group
+    similar type of heading, -->
+    <header>
+        <hgroup>
+            <h1>Learn to create websites</h1>
+            <h2>You can learn with hitesh and build your own websites</h2>
+        </hgroup>
+        <!-- navigation bar is usually made up of unordered list -->
+        <!-- format: nav>ul>li>a -->
+        <!-- Generally you can see this nav come inside the header.  -->
+        <nav>
+            <ul>
+                <!--The reason of using "#" here so that we can run our code smoothly and
+                    code will not crash. It also means link is due we can add link later. -->
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <!--(Remember):If you write anything on the top it not generally means it always
+    remains at the top. -->
+    <!--(imp):CSS is perfectly capable of moving any content at the top to bottom.
+    It can change the position that all in the CSS--> 
+    
+    <!-- Usually the "content" of the website go inside the "article tag". It just a 
+    container  -->
+    <article>
+        <!--Here you can further have some headings -->
+        <hgroup>
+            <h1>Lorem ipsum dolor sit.</h1>
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+            <!-- There is also a "time tag" -->
+            <h3><time datetime="2024-08-02">August 2nd</time></h3>     
+        </hgroup>
+        <!-- Inside the article It is a common practice to have a multiple sections. -->
+        <!--For this we have "section tag" -->
+        <section>
+            <!-- Inside the section tag you can write anything. -->
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere modi fugit aliquid sapiente, voluptates at amet ratione debitis consectetur earum perspiciatis odio, repellat et!</p>
+        </section>
+
+        <!-- We have dedicated section to add the code in the website
+            for this we are using the "code tag". -->
+        <section>
+            <code>console.log("Subhash")</code>
+        </section>
+    </article>
+
+    <!-- "footer tag" -->
+     <footer>
+        <!--We can also have "address tag" as well for adding the address -->
+        <address>Add your address here</address>
+        <!-- One common thing you can see in the footer is tradmark logo or the
+            copyright logo. There is a common way  -->
+
+        <!-- Most common things you can see some of the special symbol
+            start with the & . As soon as you put the & sign you can create special symbol on the web -->
+
+        <!-- special symbol(character) option can be seen by writing & and then press
+        ctrl+spc -->
+        
+        <p> &copy; chaicode 2024</p>
+        <!-- You can update this above date using javascript also. -->
+
+        <!-- If you remove charset="UTF-8" from the meta tag this &copy; run
+            perfectly fine. Because "Browser" is smart enough to actually deduce that
+            and actually put it for you. -->
+
+        <!--This is actually the part of the UTF-8 that we are using the styling
+            or the encoding that we are using.  -->
+       
+        <!--There are other encoding as well may be for the special characters for
+            japanese characters, chinese characters there are lot of languages.  -->
+
+     </footer>
+
+   
+      
+</body>
+</html>

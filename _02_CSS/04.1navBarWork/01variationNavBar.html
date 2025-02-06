@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Style Nav Bar</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin:0;
+            padding:0;
+        }
+
+
+        .navbar{
+           background-color: #000000c9;
+            padding: 7px;
+            border-radius: 25px;
+            margin: 10px;
+        }
+
+        .navbar ul{
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        ul a{
+            text-decoration:none;
+            color:rgba(133, 97, 50, 0.774);
+            /* background-color: #d25c5c; */
+            padding: 5px 15px;
+        }
+
+        .login-btn{
+            background-color: rgba(226, 102, 56, 0.842);
+            padding: 5px 15px;
+            border: none;
+            border-radius: 4px;
+        }
+        
+        .login-btn:hover::before{
+            content:"abc";
+            cursor:pointer;
+
+            background-color: #a30a0a;
+        }
+
+        
+
+
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><button class="login-btn">Login</button></li>
+            </ul>
+        </nav>
+    </div>
+    
+</body>
+</html>

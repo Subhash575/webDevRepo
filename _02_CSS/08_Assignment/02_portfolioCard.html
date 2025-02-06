@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Cart</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- for font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Kablammo&family=Oxanium:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Oxanium", serif;
+      }
+      body {
+        background-color: #3c3c3af0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      h2 {
+        color: rgba(4, 4, 4, 0.968);
+      }
+      p {
+        color: rgb(35, 35, 35);
+      }
+
+      .container {
+        /* border: 4px solid green; */
+        background: linear-gradient(167deg, rgba(6, 134, 177, 0.88), #d5f5ffd7);
+        box-sizing: border-box;
+        /* border: 1px solid black; */
+        border-radius: 8px;
+        padding-top: 15px;
+        width: 250px;
+        height: 365px;
+
+        display: flex;
+        /* pt to remember when we use flex-direction property it will reverse the
+        justify-content and align-items property of flex box here justify work on y-axis
+        and algin work on x- axis */
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      img {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        margin-bottom: 12px;
+      }
+      .fa-linkedin {
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f4f1f1;
+        color: blue;
+        border-radius: 10px;
+      }
+      .fa-square-twitter {
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: blue;
+        background-color: #f4f1f1;
+        border-radius: 10px;
+      }
+      .fa-youtube {
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(194, 52, 52);
+        background-color: #f4f1f1;
+      }
+      .fa-square-facebook {
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: blue;
+        background-color: #f4f1f1;
+      }
+      .icon {
+        /* border: 2px solid black; */
+        width: 100%;
+        padding: 15px;
+        display: flex;
+        justify-content: space-around;
+      }
+      button {
+        margin-top: 15px;
+        padding: 5px 18px;
+        border: none;
+        /* background: linear-gradient(20deg, rgba(15, 30, 103, 0.726), rgba(83, 83, 220, 0.852)); */
+        background-color: #1a6db1c3;
+        color: rgba(255, 255, 255, 0.791);
+        border-radius: 4px;
+      }
+      button:hover {
+        border: 1px solid white;
+      }
+      .wave {
+        /* border: 1px solid black; */
+        height: 100%;
+        display: flex;
+        align-items: end;
+      }
+      svg {
+        /* border: 5px solid green; */
+        width: 100%;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="../images/programmer.jpg" alt="person-image" />
+      <h2>Subhash</h2>
+      <p>UI/UX Designer</p>
+      <div class="icon">
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-square-twitter"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-square-facebook"></i>
+      </div>
+      <button>more</button>
+      <div class="wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#273036"
+            fill-opacity="1"
+            d="M0,288L120,288C240,288,480,288,720,256C960,224,1200,160,1320,128L1440,96L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+          ></path>
+        </svg>
+      </div>
+    </div>
+  </body>
+</html>

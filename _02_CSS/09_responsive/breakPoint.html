@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive design</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+        background-color: black;
+        color: aliceblue;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .responsive-div {
+        width: 100%;
+        max-width: 1200px;
+        padding: 20px;
+        background-color: #3c0655;
+      }
+      /* 1.mobile screen  break-point: 600px taken*/
+      /* This behaviour only will be helpful(work) only till be hit the max-width of 600 pixels
+      and when it become 601px it will not work. */
+      @media (max-width: 600px) {
+        body {
+          align-items: flex-start;
+        }
+        .responsive-div {
+          background-color: rgb(85, 85, 229);
+        }
+      }
+      /* The best part about "media queries" it will take
+      the all the thing from the previous design and
+      you need to work on those design which you need or
+      want to over write. */
+
+      /* 2.Tablet screen: Here break-pt is 601px and 1024px */
+      @media (min-width: 601px) and (max-width: 1024px) {
+        body {
+          align-items: center;
+        }
+        .responsive-div {
+          background-color: rgb(90, 224, 117);
+        }
+      }
+      /* remember above media querie work from 601px to 1024px when it become: 1025px then control goes
+      back to body and it will execute default css given by us for e.g like background color etc. */
+
+      /* Once define the break-point you start working on the views you want.
+        ex1:If you want to hide certain elements on the mobile screen. select those classes and
+        set "display:none"
+        ex2: If you want to change the text size you can change it according to the screen size
+        as you want. */
+
+      /* reference for break-point from the tailwind css website.
+        If you using tailwind it provide you break-point automatically. */
+    </style>
+  </head>
+  <body>
+    <div class="responsive-div">
+      this div changes color based on the screen size.
+    </div>
+  </body>
+</html>

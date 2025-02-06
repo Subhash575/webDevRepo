@@ -1,0 +1,15 @@
+#How responsive design-work:-
+Whenever we work with the mobile responsive device, we have to actually provide some "media queries".
+The media queries are nothing. Thery are annotated symbols which specifically mention that hey what do you want to happen on a screen/display at a certain "pixel size".
+
+/*
+some etxra point:-
+In device If we get the display behavior like android then we show pop up where we
+say download "android-app(phone)" similarly for "i-phone-app(phone)" as well.
+*/
+
+media queries have two break-pt: 1.max-width  2.min-width
+1.max-width: max always says that I will work till this breakpoint.
+2.min-width: min always says that minimum this amount of width is actually require to
+be functional, to be working.
+

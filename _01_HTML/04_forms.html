@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+</head>
+<body>
+    <!--Here we are learning about the form tag -->
+    <!-- (imp)To take data from the user we use the "form tag". -->
+    <h1>Login form</h1>
+     <form>
+        <label for="email">
+            email:
+            <input type="text" name="email">
+            <!-- This input tag take text as input from the user. -->
+            <!--(imp) Always remember "for" and "name" should be same in the form. -->
+        </label>
+
+        <label for="password">
+            password:
+            <input type="password" name="password" id="">
+            <!-- This input tag take password as input from the user. -->
+            <!-- (imp)you can find different input type by writing:- input:pasword or input:
+             anything and then press enter -->
+        </label>
+        
+        <!-- for login or submit the form we need the button which we write inside the
+         "form tag"  button tag can be of different type which you can find by writing
+         this:-  button:   -->
+         <button type="submit">Login</button>
+         <button type="reset">reset</button>
+        
+     </form>
+
+    <div>
+        <h1>learning form</h1>
+        <form >
+            <label for="email">
+                Email:
+                <input  placeholder="write email" type="email" name="eamil" id="">
+                <!-- Here you can see the "placeholder attribute". It will show
+                 in the input box a given message which you write on the placeholder
+                 After running the code you can understand it. 
+                 It make the form easy to understand so that people cannot fill
+                 the wrong data on the input box.-->
+
+                <!-- There are different type of input which you can find using this
+                 input:email In above type of input is email. In input type email it
+                 will check if you write the email or not and show you the warning.
+                 which you can see -->
+            </label>
+
+            <label for="URL">
+                 URL:
+                <input placeholder="enter the url" type="url" name="URL" id="">
+                <!-- Here given input type is URL which expect URL from the user. 
+                 If you give anything else beside URL it will give(show) message to
+                 the user.-->
+            </label>
+
+            <label for="description">
+                description:
+                <textarea name="description" rows ="5" cols ="33" id="">Write here</textarea>
+                <!-- textarea It is also a input but it is explicitly name as "textarea".
+                 You can restrict it row or column as well. There are more attribute on it.
+                 -->
+            </label>
+
+            <!--input type checkbox:- -->
+            <label for="Games">
+                Cricket: <input type="checkbox" name="Games" id="">
+                <!-- Here we will learn about the input type "checkbox" -->
+            </label>
+            <label for="Games">
+                Football: <input type="checkbox" name="Games" id="">
+            </label>
+            <!-- In checkbox you can restrict the check so that you can only check the
+             one option. -->
+
+            <!-- Input type radio:- -->
+             <label for="work">
+                work: <input type="radio" name="work" id="">
+                <!-- In input type radio after fill(tick) the radio circle you cannot unfill
+                 (untick) it.
+                 -->
+             </label>
+             
+             <!-- Here we learn "select tag" or "option tag" which are inside the "label tag"-->
+              <label for="Games">
+                Games:
+                <!-- Select tag: We can say it is a type of input as well. -->
+                <select name="Games" id="">
+                    <!--(Remember) In general "value" and "content" of option tag is same. -->
+                    <option value="Cricket">Cricket</option>
+                    <option value="Football">Football</option>
+                    <option value="Chess">Chess</option>
+                    <option value="Ludo">Ludo</option>
+                </select>
+              </label>
+              <!-- For line break you can use the "br tag" -->
+               <br>
+                <!--input type month  -->
+              <label for="months">
+                month: <input type="month" name="months" id="">
+              </label>
+              <!-- input type color -->
+              <label for="colors">
+                color: <input type="color" name="colors" id="">
+              </label>   
+              <!--shortcut for see different type of input one is "input:anything write"
+              or other shortcut is went on type = "then press ctrl + space"  -->
+              
+            <button type="submit">submit</button>
+
+        </form>
+    </div>
+
+</body>
+</html>

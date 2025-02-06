@@ -1,0 +1,10 @@
+p{
+    color:bisque;
+    font-size: 25px;
+    padding: 200px;
+    /* Here we set the color of paragraph "bisque" but it not show this changes on
+    the website reason is that bcs we already change color using internal css
+    which is more domminating then external css.
+    order of domination is: inline > internal > external (css). 
+    */
+}

@@ -1,0 +1,9 @@
+Grid is another way how you can lay out elements on your web page.(beside flex-box)
+We already seen it flex-box is compeletly capable of placing any element anywhere 
+that you want.
+
+# Whenever you need to create navigation bar consider using "Flex-box" bcs it easy.
+rest of other things try to consider using "Grid".
+
+#Grid actually allow you to create really amazing pattern that can be introduce in blogs,
+images and galleries and even the entire webpage can be laid out with it.

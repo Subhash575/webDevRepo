@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background: #1a1a1a;
+            margin:0;
+            padding:0;
+            height: 100vh;
+            /* height: 200px; */
+            /*(IMP) Below property of flex change the content position according to
+            their height their height: 100vh property is use generally for algining
+            content of body or card */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card{
+            background-color: #d0dace;
+            border-radius: 7px;
+            padding: 25px;
+            width: 295px;
+        }
+        h1{
+            color: rgb(81, 79, 79);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        form{
+            display: flex;
+            flex-direction:column;
+            /* There is also a property of column reverse in flex box which will reverse
+            the item position column wise */
+            /* flex-direction:column-reverse; */
+
+            /* You can use "gap: 20px" or any value according to your need. It will
+            give space between the items of form.
+            There can be another way to do the same things */
+        }
+
+        input{
+            margin-bottom: 15px;
+            /* Always remember padding is inner breathing space. */
+            /* Below property give space between the inner text of input which
+            is Email, password(placeholder text) in below case. */
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid black;
+            background-color:rgb(221, 229, 232) ;
+        }
+
+        button{
+            background-color:rgb(136, 132, 132);
+            border-radius: 8px;
+            color:rgb(232, 223, 223);
+            padding:7px;
+        }
+
+        button:hover{
+            background-color:rgb(81, 79, 79);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Login</h1>
+        <form>
+            <input type="email" name="" id="" placeholder="Email">
+            <input type="password" name="" id="" placeholder="password">
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>

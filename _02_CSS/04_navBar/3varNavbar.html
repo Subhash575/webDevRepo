@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #8fbbe87c;
+      }
+      .nav-container {
+        margin-bottom: 40px;
+      }
+
+      h2 {
+        margin-bottom: 10px;
+      }
+
+      /*3. Variation of navbar. */
+      .nav3 {
+        /* border: 2px solid rgb(12, 12, 12); */
+        background-color: #09e63d96;
+        padding: 10px;
+      }
+
+      .nav3 ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        /* It will set property horizontal */
+        justify-content: space-around;
+        /* It will set property vertically */
+        align-items: center;
+      }
+
+      .nav3 a {
+        text-decoration: none;
+        color: #f7f7f7df;
+        padding: 10px;
+        display: block;
+      }
+
+      .nav3 .dropdown-content {
+        display: none;
+      }
+
+      .nav3 .dropdown:hover .dropdown-content {
+        display: block;
+        /* Here is the problem related to display:block here it will extend my all the navbar
+            which we don't went to remove this we use the "position" property here.
+            Here we use "position:absolute" which will ripapart your content from the DOM and put it some
+            where else(imp) */
+        position: absolute;
+        background-color: #141414af;
+        min-width: 150px;
+      }
+
+      .nav3 .login-btn {
+        border: none;
+        background-color: #3bc329;
+        color: aliceblue;
+        padding: 5px 10px;
+      }
+
+      .nav3 .login-btn:hover {
+        background-color: #0ead53;
+        border: 2px solid white;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav-container">
+      <h2>Variation 3: Horizontal with dropdown</h2>
+      <nav class="nav3">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li class="dropdown">
+            <a href="#">About</a>
+            <!-- If we apply display flex property on ul it will show below div on next line
+                    bcs of block level element -->
+            <div class="dropdown-content">
+              <a href="#">Our Story</a>
+              <a href="#">Team</a>
+              <a href="#">Contact</a>
+            </div>
+          </li>
+          <li><a href="#">Products</a></li>
+          <li><button class="login-btn">Login</button></li>
+        </ul>
+      </nav>
+    </div>
+  </body>
+</html>

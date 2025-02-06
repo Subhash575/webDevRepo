@@ -1,0 +1,20 @@
+### learning
+1. For using font awesome website(icon) we need the
+cdn(content delivery network) what will cdn do it will
+help in get data from the "nearest server" so that data
+transfer quickly.
+For getting the font we went on cdn.js website to
+get the library of font awesome.
+
+2. Background-image property:-
+The background-image property sets one or more background images for an element.
+By default, a background-image is placed at the top-left corner of an element, and repeated both vertically and horizontally.
+Tip: The background of an element is the total size of the element, including padding and border (but not the margin).
+{for more refer from the w3 school}
+ 
+3. Background-size:- w3 school
+The background-size property specifies the size of the background images.
+There are four different syntaxes you can use with this property: the keyword syntax ("auto", "cover" and "contain"), the one-value syntax sets the width of the image (height becomes "auto"), the two-value syntax (first value: width of the image, second value: height), and the multiple background syntax (separated with comma).
+
+//We can use linear - gradient on background image.
+background-image: linear-gradient(red, yellow, blue);
