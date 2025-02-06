@@ -1,0 +1,12 @@
+#1 To checking remote connection use git command:-
+git remote -v
+
+#2 For establishing remote connection we use command:-
+git remote add origin <remote-url>
+
+#3 push code to remote repository:-
+git push -u origin main 
+//Here -u(flag) is use to set up the upstream so that data can be easily push on
+//github so that when next time you push the data on the
+//github use command:- git push
+
