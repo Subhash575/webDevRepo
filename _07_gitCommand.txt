@@ -10,3 +10,7 @@ git push -u origin main
 //github so that when next time you push the data on the
 //github use command:- git push
 
+#4 To remove the local git repo use command:-
+rm -rf .git  
+//valid only in MacOS/Linux or "Bash terminal"
+
