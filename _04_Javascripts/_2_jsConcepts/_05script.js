@@ -1,13 +1,13 @@
 // ## (Imp):- This is important for understanding.
 // another asynchronous function:- setTimeout()
 function myFunc(params) {
-    console.log("click the button");   
+  console.log("click the button");
 }
 
 console.log("HI");
 //setTimeout() is global function.
 
-//This is IO intensive.
+//This is "IO intensive".
 //Here callback as function(for understanding)
 setTimeout(myFunc, 1000);
 //Here 5000 means 5 sec
@@ -15,17 +15,16 @@ console.log("Welcome to loope");
 
 let ans = 0;
 //This is CPU intensive.
-for(let i = 0; i <= 1000000000; i++){
-    ans += i;
+for (let i = 0; i <= 1000000000; i++) {
+  ans += i;
 }
-console.log(ans+ " is expensive.");
+console.log(ans + " is expensive.");
 //## Imp:-
 //We need to check which will print first. Here CPU intensive task is print first even
 // if the IO intensive function execute quickly bcs at that pt thread
 // is busy doing the work(CPU intensive) here work is iterating
 //Therefore first : console.log(ans+ " is expensive."); will print
 //Then IO intensive task is done here that task is print: console.log("HI");
-
 
 // ### JS Architecture for async code
 // How JS executes asynchronous code - http://latentflip.com/loupe/
@@ -39,13 +38,13 @@ console.log(ans+ " is expensive.");
  ex:-
 */
 function first() {
-    console.log("First");
-  }
-  function second() {
-    first();
-    console.log("Second");
-  }
-  second();
+  console.log("First");
+}
+function second() {
+  first();
+  console.log("Second");
+}
+second();
 
 /*
 2. Web APIs

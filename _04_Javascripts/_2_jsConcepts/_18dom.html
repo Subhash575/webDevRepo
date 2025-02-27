@@ -1,0 +1,45 @@
+<!-- ## Deleting an element -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM - Deleting an Element</title>
+  </head>
+  <body>
+    <!-- ##removeChild - Removes a specific node of a parent
+        ##onclick - function that triggers whenever you click on a button -->
+    <h1>Todo List</h1>
+    <div>
+        <div id="todo-1" style="display: flex;">
+            <h4>Sleep</h4>
+            <button onclick="deleteTodo(1)">delete</button>
+        </div>
+        <br><br>
+        <div id="todo-2" style="display: flex;">
+            <h4>Get UP</h4>
+            <button onclick="deleteTodo(2)">delete</button>
+        </div>
+        <br><br>
+    </div>
+    <div>
+        <input type="text"></input>
+        <button>Add Todo</button>
+    </div>
+    <script>
+        function deleteTodo(index){
+            const element = document.getElementById("todo-"+index);
+            element.parentNode.removeChild(element);
+            /* Here removeChild will call the parent first then remove the specific
+            child here we cannot directly delete the element.
+            #we can also give id to the parent node for ex:- todoParent instead of
+            writing the parentNode.
+            ex:- element.getElementById('todoParent').removeChild(element);
+            ##Until this point we know read, update and delete element.
+            remaining is adding element.
+            */
+        }
+        
+    </script>
+  </body>
+</html>

@@ -1,4 +1,4 @@
-#1 To checking remote connection use git command:-
+#1 To checking remote connection we use git command:-
 git remote -v
 
 #2 For establishing remote connection we use command:-

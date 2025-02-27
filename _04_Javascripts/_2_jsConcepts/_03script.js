@@ -6,6 +6,7 @@ If radix is omitted, JavaScript assumes radix 10. If the value begins with "0x",
 
 Notes
 If the first character cannot be converted, NaN is returned.
+NaN(means not an integer).
 Leading and trailing spaces are ignored.
 Only the first integer found is returned.
 
@@ -23,18 +24,17 @@ console.log(parseInt("10", 10));
 // 1.When input is string we can use "parseInt" to convert into integer.
 // 2.Way is using Typescript.
 function sumOfNum(x, y) {
-    return parseInt(x) + parseInt(y);    
+  return parseInt(x) + parseInt(y);
 }
 console.log(sumOfNum("34", 6));
 
 // Q: Find Sum from one to Number
 function sum(n) {
-    
-    let ans = 0;
-    for(let i = 1; i <= n; i++){
-        ans += i;
-    }
-    return ans;   
+  let ans = 0;
+  for (let i = 1; i <= n; i++) {
+    ans += i;
+  }
+  return ans;
 }
 console.log(sum(5));
 /*
@@ -85,12 +85,11 @@ const contents = fsa.readFileSync("./Javascripts/a.txt", "utf-8");
 console.log(contents);
 
 //another ex:-
-const content2 = fsa.readFileSync("b.txt", "utf-8");
+const content2 = fsa.readFileSync("./_06_txtFile/b.txt", "utf-8");
 console.log(content2);
 
 //there is method is fs module which is: readFile();
 //which means read file asynchoronusly.
-
 
 //### I/O bound tasks vs CPU bound tasks
 /*
@@ -100,9 +99,9 @@ ex:-
 */
 let ans = 0;
 for (let i = 1; i <= 1000000; i++) {
-	ans = ans + i
+  ans = ans + i;
 }
-console.log(ans);	
+console.log(ans);
 /*
 A real world example of a CPU intensive task is running for 3 miles. Your legs/brain have to constantly be engaged for 3 miles while you run.
 */
@@ -112,7 +111,7 @@ A real world example of a CPU intensive task is running for 3 miles. Your legs/b
 I/O-bound tasks are operations that are limited by the system’s input/output capabilities, such as disk I/O, network I/O, or any other form of data transfer. These tasks spend most of their time waiting for I/O operations to complete.
 */
 const fs = require("fs");
-const contents3 = fs.readFileSync("c.txt", "utf-8");
+const contents3 = fs.readFileSync("./_06_txtFile/c.txt", "utf-8");
 console.log(contents3);
 /*
 A real world example of an I/O bound task would be Boiling water. I don’t have to do much, I just have to put the water on the kettle, and my brain can be occupied elsewhere.
@@ -120,22 +119,22 @@ A real world example of an I/O bound task would be Boiling water. I don’t have
 
 //First known about "function argument"
 //calculator for +,-,*,/:-
-function add(x, y){
-    return x+y;
+function add(x, y) {
+  return x + y;
 }
-function sub(x, y){
-    return x-y;
+function sub(x, y) {
+  return x - y;
 }
-function multi(x, y){
-    return x*y;
+function multi(x, y) {
+  return x * y;
 }
-function divide(x, y){
-    return x/y;
+function divide(x, y) {
+  return x / y;
 }
 // Passing in what needs to be done as an argument.
 //Here we Passing function to another function as a argument.
-function doOperation(x, y, op){
-    return op(x, y);
+function doOperation(x, y, op) {
+  return op(x, y);
 }
 console.log(divide(10, 3));
 console.log(doOperation(9, 2, sub));

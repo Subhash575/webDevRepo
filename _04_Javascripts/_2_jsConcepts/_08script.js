@@ -12,6 +12,7 @@ Reads the contents of a file asynchoronusly
 
 const fs = require("fs");
 //try to correct below approach:-
+//we need to parameter which is "resolve" and "reject" which we learn ahead.
 function gettingFile(filePath, fn) {
   fs.readFile(filePath, "utf-8", function (err, data) {
     if (err) console.log("There is error");

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM:- Adding an element</title>
+  </head>
+
+  <body>
+    <!-- Adding elements Two things you need to know:-
+        1. createElement :- It will not add element in the browser.
+           It syntax somewhat similar to querySelector syntax.
+        2. appendChild :- For adding element directly in the browser
+        we need apendChild.
+    -->
+    <h1>Adding Element IN DOM</h1>
+    <div>Hi there</div>
+    <script>
+      const divEl = document.createElement("div");
+      divEl.innerHTML = "yes";
+      document.querySelector("body").appendChild(divEl);
+      // Here we can store document.querySelector("body") in any variable const parentEl
+      // and then do:- parentEl.appendChild(divEl);
+    </script>
+  </body>
+</html>

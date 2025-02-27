@@ -1,0 +1,23 @@
+<html>
+  <body id="body">
+    <h2>Todo 1</h2>
+    <h2>Todo 2</h2>
+    <h2>Todo 3</h2>
+    <button onclick="deleteRandomTodo()">Delete todo!</button>
+  </body>
+  <script>
+    function deleteRandomTodo() {
+      const element = document.querySelector("h2");
+      const parentElement = element.parentNode;
+      parentElement.removeChild(element);
+    }
+  </script>
+</html>
+<!-- 
+    ##By using querySelector() we can delete the top level element everytime
+    we click the button bcs we select the array of element having same tag.
+    const element = document.querySelector('h4');
+    element.parentNode.removeChild(element);
+    bcs we have multipe h4 tag if we don't mension index of h4 it will always
+    select first by default.
+-->

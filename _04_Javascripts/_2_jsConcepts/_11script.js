@@ -23,6 +23,6 @@ async function solve() {
   console.log("hi there");
 }
 //Another the hood async, await using the "Promise" but look like synchronous but
-//actuall asynchronous.
+//actually asynchronous.
 //It make the code even simpler.
 solve();

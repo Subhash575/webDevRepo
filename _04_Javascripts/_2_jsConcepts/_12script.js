@@ -2,11 +2,10 @@
 # rejects in promises
 */
 
-const { log } = require("console");
 const fs = require("fs");
 function readFileAsync() {
   return new Promise(function (resolve, reject) {
-    fs.readFile("./Javascripts/a.txt", "utf-8", function (err, data) {
+    fs.readFile("./_04_Javascripts/a.txt", "utf-8", function (err, data) {
       if (err) {
         reject("file not found");
       } else {

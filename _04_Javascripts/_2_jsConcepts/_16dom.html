@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM-Document Object Model</title>
+  </head>
+  <body>
+    <!--
+    The DOM, or Document Object Model is a programming interface for web
+    documents(refer compelete html). It represents the structure of a web page as
+    a tree of objects.
+    The DOM abstracts the structure of the document into a tree of objects, allowing
+    scripts to manipulate the content and structure dynamically. This abstraction
+    enables more complex interactions and functionalities beyond just static Html
+
+    Fetching elements
+    There are 5 popular methods available for fetching DOM elements - 
+    querySelector
+    querySelectorAll
+    getElementById
+    getElementByClassName
+    getElementsByClassName
+    -->
+    <h1>Todo list</h1>
+    <h4 id="todo1">Take class</h4>
+    <h4 id="todo2">Go</h4>
+    <h4 id="todo3">Go to Gym</h4>
+    <h4 id="todo4">0</h4>
+    <div>
+      <input type="text" />
+      <button onclick="addTodo()">ADD Todo</button>
+      <!-- when you click on button then addTodo() func is call -->
+      <div>
+        <button onclick="stopCnt()">stop counter</button>
+      </div>
+    </div>
+    <script>
+      var name = "Subhash";
+      //   console.log(name);
+
+      //   console.log(document);
+      // When you hover the console of web browser during inspect you can see whole
+      // webpage is select when we console.log(document);
+      //This document is avaliable inside the browser and it will point the head node
+      // of tree which is html(bcs in DOM html structure is repersent in the form of
+      // tree).
+
+      // ##1 Query Selector:-
+      //Typing below code on console of browser so that we can get data bcs here
+      //if we run the code input tag content reload and it will print nothing
+
+      //   ex 1:-
+      //   const inputElement = document.querySelector("input");
+      //   inputElement.value;
+      //   ("34567");   -->these we write in the input which will printed.
+
+      //  ex 2:-
+      //  const h1Element = document.querySelector("h1");
+      //  h1Element.innerHTML;
+      // "for printing value of the h1 tag we use innerHTML only not ".value" bcs ".value"
+      // is only use in case of the "input tag" only"
+      // In case of div also.
+
+      // ex 3:-
+      /*
+
+      const divEl = document.querySelector("div");
+      undefined;
+      divEl.innerHTML;
+      ('\n      <input type="text">\n      <button>ADD Todo</button>\n    ');
+
+      */
+
+      //  ex 4:-
+      //  document.querySelector("button").innerHTML;
+      //  ("ADD Todo");
+
+      //For Better understanding try these all example on the console of browser.
+
+      function addTodo() {
+        const inputEl = document.querySelector("input");
+        // console.log(inputEl.value);
+        document.getElementById("todo3").innerHTML = inputEl.value;
+      }
+
+      //   ##2 querySelectorAll
+      // Ex1:-
+      // document.querySelectorAll('h4');
+      // NodeList(3) [h4, h4, h4]
+
+      //  document.querySelectorAll('h4')[1];
+      //   <h4>To</h4>
+
+      // Fetching element using "Id" with the help of querySelector.
+      // document.querySelector("#todo1");
+      //op:- <h4 id=​"todo1">​Take class​</h4>​
+
+      // ##3 getElementById
+      // For "id" we can use "getElementById" selector:-
+      // document.getElementById("todo1");
+      // op:- <h4 id=​"todo1">​Take class​</h4>​
+
+      // similar way 4, 5 fetch element method work
+      // 5 method is similar as querySelectorAll which is getElementsByClassName
+      // 4 is somewhat like getElementById which is getElementByClassName.
+
+      // We can only use above to Fetching element method "querySelector()" or
+      // "querySelectorAll()" to compelete most of the work.
+
+      // Try these out on the console of browser.
+      // Here we don't log the value therefore we can seen the list and h4 tag with
+      // content.
+
+      // ##Updating an element.
+      //Creating counter:-
+      const tagSelect = document.getElementById("todo4");
+      cnt = 0;
+      const myInterval = setInterval(() => {
+        tagSelect.innerHTML = cnt;
+        cnt += 1;
+      }, 1000);
+
+      function stopCnt() {
+        clearInterval(myInterval);
+      }
+    </script>
+    <!-- <script src = "script.js"></script> -->
+    <!-- Instead of writing script tag content here we can simply link script with 
+    external js file using "src" attribute. link external css. -->
+  </body>
+</html>

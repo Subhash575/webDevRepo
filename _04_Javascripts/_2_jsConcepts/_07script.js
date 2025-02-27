@@ -3,8 +3,8 @@
 Promise class give you the promise means it will return you something in the future.
 */
 
-function logName(){
-    console.log("Subhash");
+function logName() {
+  console.log("Subhash");
 }
 
 setTimeout(logName, 3000);
@@ -24,17 +24,15 @@ Promises are used to handle asynchronous operations more effectively than tradit
 Ex:- To demonstrate:
 */
 
-function setTimeoutPromisefied(ms){
-    return new Promise(resolve => setTimeout(resolve, ms));
-    //It will return the object of the promise class.
-    // let p = new Promise(resolve => setTimeout(resolve, ms));
-    // return p;
+function setTimeoutPromisefied(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+  //It will return the object of the promise class.
+  // let p = new Promise(resolve => setTimeout(resolve, ms));
+  // return p;
 }
 
-
-function callback(){
-    console.log("3 sec is passed.");
-    
+function callback() {
+  console.log("3 sec is passed.");
 }
 
 //method 1 : using callback approach.
@@ -47,22 +45,22 @@ setTimeoutPromisefied(3000).then(callback);
 // How it work
 
 //first way to understand:-
-function promisefiedCall(resolve){
-    setTimeout(resolve, 3000);
+function promisefiedCall(resolve) {
+  setTimeout(resolve, 3000);
 }
 
-promisefiedCall(function(){
-    console.log("say Goodbye");
+promisefiedCall(function () {
+  console.log("say Goodbye");
 });
 
 //second way to understand:-
-function waitFor3S(resolve){
-    console.log(resolve); // this resolve contain the main function here and it will print.
-    setTimeout(resolve, 3000);
+function waitFor3S(resolve) {
+  console.log(resolve); // this resolve contain the main function here and it will print.
+  setTimeout(resolve, 3000);
 }
 
-function main(){
-    console.log("How are you");
+function main() {
+  console.log("How are you");
 }
 
 waitFor3S(main);
@@ -72,42 +70,39 @@ waitFor3S(main);
 
 // third way somewhat similar to actual approach.
 
-function waitFor(resolve){
-    setTimeout( resolve, 3000);
+function waitFor(resolve) {
+  setTimeout(resolve, 3000);
 }
 
-function promiseFiedPrintAddress(){
-    return new Promise(waitFor);
+function promiseFiedPrintAddress() {
+  return new Promise(waitFor);
 }
 
-function printAddress(){
-    console.log("Hisar");
+function printAddress() {
+  console.log("Hisar");
 }
 
 promiseFiedPrintAddress().then(printAddress);
 //Remember If "waitFor" is call then it will take input from the ".then" which will done by Promise class
-//This is actually some-what similar to actual promise code but here we don't pass time.
+//This is actually some-what similar to actual promise code but here we don't pass time as Parameter.
 
 //some simple example for understanding Promise:-
 
-function random(){
-    
-}
+function random() {}
 
 const p = new Promise(random);
-console.log(p);   
+console.log(p);
 // if we log it after calling empty function it will print: Promise { <pending> }
 //According to defination of promise it will return something eventually.
 
 //ex:-
-function inform(resolve){
-    setTimeout(resolve, 3000);
-
+function inform(resolve) {
+  setTimeout(resolve, 3000);
 }
-//remember this inform take parameter from ".then" of object 
+//remember this inform take parameter from ".then" of object
 
-function work(){
-    console.log("Do your work");
+function work() {
+  console.log("Do your work");
 }
 const pt = new Promise(inform);
 pt.then(work);

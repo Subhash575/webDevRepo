@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>learning DOM</title>
+  </head>
+  <body>
+    <!-- "The setInterval() method" calls a function at specified intervals (in milliseconds).
+    The setInterval() method continues calling the function until clearInterval() is called, or the window is closed.
+    1 second = 1000 milliseconds. -->
+
+    <!-- Note
+    To execute the function only once, use the setTimeout() method instead.
+    To clear an interval, use the id returned from setInterval():
+    myInterval = setInterval(function, milliseconds);
+    Then you can to stop the execution by calling clearInterval():
+    clearInterval(myInterval); -->
+
+    <h1># setInterval method:-</h1>
+    <p id="call"></p>
+    <button onclick="stopIt()">stop printing</button>
+    <script>
+      const el = document.getElementById("call");
+      const myInterval = setInterval(() => {
+        el.innerHTML += "hello";
+      }, 1000);
+
+      function stopIt() {
+        clearInterval(myInterval);
+      }
+    </script>
+  </body>
+</html>
+<!-- learning "setInterval" and "clearInterval" both method here.
+also refer w3 school clearInterval article. -->
