@@ -1,0 +1,56 @@
+<!-- ##Here we add the "delete functionality using setAttribut:-" -->
+<body>
+    <input type="text"></input>
+    <button onclick ="toDO()">todo</button>
+    <div id="todo"></div>
+    <script>
+        //using push method we can push array/object in javascript.
+
+        //state
+        let todos = [];
+
+        function toDO(){
+            const inputVal = document.querySelector("input").value;
+            // Here we add check so that empty task is not added.
+            if(inputVal){
+                todos.push({
+                title : inputVal
+                });
+
+                render();
+            }
+            // After adding the task it become empty.
+            document.querySelector("input").value = "";
+            
+        }
+        
+
+        function deleteTODO(index){
+            todos.splice(index, 1);
+            render();
+        } 
+
+        //component:- In componet DOM structure write there.
+        function todoComponent(todo, index){
+            const div = document.createElement("div");
+            const span = document.createElement("span");
+            span.innerHTML = todo.title;
+            const btn = document.createElement("button");
+            btn.setAttribute("onclick", "deleteTODO(" +index+ ")");
+            btn.innerHTML = "delete";
+            div.appendChild(span);
+            div.appendChild(btn);
+            return div;
+        }
+
+        //In react It will done by react.
+        function render(){
+            document.querySelector("#todo").innerHTML = "";
+            for(let i = 0; i < todos.length; i++){
+                const element = todoComponent(todos[i], i);
+                document.querySelector("#todo").appendChild(element);
+            }
+        }
+
+    </script>
+</body>

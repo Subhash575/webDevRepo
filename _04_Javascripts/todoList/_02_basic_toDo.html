@@ -1,0 +1,34 @@
+<!-- Second Way to add element on the DOM
+Here we add tags on the container first and after that we append that container on the
+DOM
+This is the best way to add element on the DOM. -->
+
+<body>
+    <input type="text"></input>
+    <button onclick="toDo()">todo</button>
+    <script>
+        function toDo(params) {
+            const val = document.querySelector("input").value;
+            const divEl = document.createElement("div");
+
+            const spanEl = document.createElement("span");
+            spanEl.innerHTML = val;
+            const btnEl = document.createElement("button");
+            btnEl.innerHTML = "delete";
+            ////
+            // Here we first add elements/tags to div first than add on the DOM
+            divEl.appendChild(spanEl);
+            divEl.appendChild(btnEl);
+            document.querySelector("body").appendChild(divEl);
+            ////
+        /*
+        (imp):- In this way adding element in the DOM is very time consuming process if
+        you add element on the complex frontend website(linkedin, facebook, X etc)
+        To resolve this problem "react" come in picture before react we use "jquery" which
+        little bit reduce the time consuming task but when react come in picture it will
+        compeletly remove this time consuming task(we learn more about this when we learn
+        react)
+       */
+        }
+    </script>
+</body>

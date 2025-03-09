@@ -1,0 +1,84 @@
+<!--See in the todoList folder how to add elements/tags in the DOM in different way:-
+_01_basic_toDo.html
+_01_basic_toDo.html
+- -->
+
+<!-- some-pt: Math.random() generate random number -->
+<!--
+ ### State derived frontends
+To make frontends easier to code, the concept of state came into the picture.
+You will see this more when we reach react.
+There are three jargon we need to understand
+1.State - The variable parts of an app.
+2.Components - How to render  state on screen. /component is structure which not change.
+3.Rendering - Taking the state and rendering it on the DOM based on the components
+Refer this from cohort slide if you forget.
+-->
+
+
+<body>
+    <input type="text"></input>
+    <button onclick ="toDO()">todo</button>
+    <div id="todo"></div>
+    <script>
+        //using push method we can push array/object in javascript.
+
+        //state
+        let todos = [];
+
+        function toDO(){
+            const inputVal = document.querySelector("input").value;
+            // Here we add check so that empty task is not added.
+            if(inputVal){
+                todos.push({
+                title : inputVal
+                });
+                render();
+            }
+            // After adding the task it become empty.
+            document.querySelector("input").value = "";
+            
+        }
+        
+
+        //component:- In componet DOM structure write there.
+        function todoComponent(todo, i){
+            const div = document.createElement("div");
+            const span = document.createElement("span");
+            span.innerHTML = todo.title;
+            const btn = document.createElement("button");
+            btn.innerHTML = "delete";
+            div.appendChild(span);
+            div.appendChild(btn);
+            // Here we use the "closure property" to add delete functionality.
+            btn.onclick = function(){
+                todos.splice(i, 1);
+                render();
+            }
+            return div;
+        }
+
+        //In react It will done by react.
+        function render(){
+            document.querySelector("#todo").innerHTML = "";
+            for(let i = 0; i < todos.length; i++){
+                // for rendering we pass the state(variable) data on the component and
+                //then this render using render function.
+                const element = todoComponent(todos[i], i);
+                document.querySelector("#todo").appendChild(element);
+            }
+        }
+
+        // The process of finding difference b/w new state and old state is called
+        // reconcilation in "react".
+        // We sort of doing this thing in render() function.
+        //clearing previous state and add new state.
+        // react is better than above approach bcs in above approach we clear out whole
+        //todo content of DOM and then add new content to DOM But react does is it find
+        //out the already present content and add the new content only therefore react
+        //do work in optimize way.
+
+
+        
+    </script>
+</body>

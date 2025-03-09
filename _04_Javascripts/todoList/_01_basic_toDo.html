@@ -1,0 +1,34 @@
+<!-- Here we create the basic todo :-
+Here we add tag in form of string which you can see. -->
+<!-- newDevEl.innerHTML = "<div>"+value+"</div><button onclick='deleteTodo("+ctr+")'>delete</button>"; -->
+<html>
+    <body>
+        
+        <input type="text"></input>
+        <button onclick="addTodo()">Add todo</button>
+        <script>
+            
+            let ctr = 1;
+
+            function deleteTodo(index){
+               const element = document.getElementById(index);
+            //    element.parentNode.removeChild(element);
+               element.remove();
+                 
+            }
+
+            function addTodo(){
+               const inputEl = document.querySelector("input");
+               const value = inputEl.value;
+
+               const newDevEl = document.createElement("div");
+               newDevEl.setAttribute("id", ctr);
+               newDevEl.innerHTML = "<div>"+value+"</div><button onclick='deleteTodo("+ctr+")'>delete</button>";
+               document.querySelector("body").appendChild(newDevEl);
+               ctr = ctr+1;
+            }
+          
+
+        </script>
+    </body>
+</html>
